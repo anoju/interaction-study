@@ -1,0 +1,29 @@
+.header {
+	padding: 30px;
+	background: lightgreen;
+}
+.content-section {
+	font-size: 0;
+}
+.section {
+	display: inline-block;
+	vertical-align: top;
+	padding: 30px;
+	font-size: 16px;
+}
+.primary-section {
+	width: 70%;
+	background: lightblue;
+}
+.secondary-section {
+	width: 30%;
+	background: lightcoral;
+}
+.footer {
+	/* border-box로 하면 padding과 border는 width, height 크기에 포함 */
+	/* box-sizing: content-box; 기본값 */
+	/* box-sizing: border-box; */
+	/* reset.css에 box-sizing: border-box; 넣어줌 */
+	padding: 30px;
+	background: lightseagreen;
+}

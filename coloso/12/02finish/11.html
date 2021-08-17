@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="11.js"></script>
+	<script>
+		// var a;
+		const a = 100;
+		const b = '전역변수 b';
+
+		// let total = 0;
+
+		console.log(total);
+
+		function 바깥함수() {
+			// const b = '비'; // 지역변수 b
+			// console.log(b);
+			// console.log(a);
+
+			function 안쪽함수() {
+				// const b = '안쪽함수 비';
+				const c = '씨';
+				console.log(b);
+			}
+
+			// console.log(c);
+
+			안쪽함수();
+		}
+
+		바깥함수();
+
+		// console.log(b);
+	</script>
+</head>
+<body>
+	<h1>변수의 유효 범위(Scope)</h1>
+</body>
+</html>

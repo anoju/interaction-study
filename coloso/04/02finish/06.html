@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.wrapper {
+			margin-bottom: 50px;
+		}
+
+		.btn {
+			padding: 10px 20px;
+			border: 5px solid #333;
+			border-radius: 10px;
+			font-size: 30px;
+			color: white;
+			background: dodgerblue;
+			cursor: pointer;
+		}
+		.btn:hover {
+			background: orange;
+		}
+
+		.btn.btn-warning {
+			background: red;
+		}
+		.btn.btn-warning:hover {
+			background: #333;
+		}
+		#btn {
+			background: gray;
+		}
+		.foo {
+			background: aqua !important;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="wrapper">
+		<button class="btn">Button 1</button>
+		<!-- 인라인 inline -->
+		<button style="background: lime;" id="btn" class="btn btn-warning foo">Button 2</button>
+	</div>
+
+	<button class="btn btn-warning">Button 3</button>
+
+</body>
+</html>

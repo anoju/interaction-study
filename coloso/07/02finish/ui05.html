@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>카드 리스트</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="default.css">
+	<style>
+		.card-list-container {
+			overflow-x: hidden;
+		}
+		.card-item {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 2em;
+		}
+		.card-header {
+			border: 2px solid #222;
+			border-bottom: 0;
+		}
+		.card-header-link {
+			display: flex;
+			padding: 1em;
+			align-items: center;
+			text-decoration: none;
+			background: white;
+			line-height: 1.4;
+		}
+		.card-header-content {
+			flex: 1 1 auto;
+		}
+		.card-author {
+			font-weight: bold;
+		}
+		.card-date {
+			font-size: 0.7rem;
+		}
+		.author-photo {
+			flex-shrink: 0;
+			width: 40px;
+			height: 40px;
+			margin-right: 0.5em;
+			border-radius: 50%;
+			background-color: white;
+		}
+		.card-body {
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 auto;
+		}
+		.card-image {
+			padding-bottom: 60%;
+			border-left: 2px solid #222;
+			border-right: 2px solid #222;
+		}
+		.card-item:nth-child(5n+1) .card-image { background-color: #f98866; }
+		.card-item:nth-child(5n+2) .card-image { background-color: #5ab4e6; }
+		.card-item:nth-child(5n+3) .card-image { background-color: #ffbb00; }
+		.card-item:nth-child(5n+4) .card-image { background-color: #80bd9e; }
+		.card-item:nth-child(5n+5) .card-image { background-color: #a67fc5; }
+		.card-description {
+			flex: 1 1 auto;
+			padding: 1em;
+			border: 2px solid #222;
+			border-top: 0;
+			background: white;
+		}
+
+		@media (min-width: 600px) {
+			.card-list {
+				display: flex;
+				flex-wrap: wrap;
+				margin: 0 -1rem;
+			}
+			.card-item {
+				width: 50%;
+				padding: 0 1rem;
+			}
+		}
+
+		@media (min-width: 1024px) {
+			.card-item {
+				width: 33.33333%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="card-list-container">
+
+		<section class="card-list">
+			<!-- 카드 아이템 1개 -->
+			<article class="card-item">
+				<header class="card-header">
+					<a href="#" class="card-header-link">
+						<figure class="author-photo a11y-hidden-bg" style="background-image: url(images/profile_sq.png)">
+							<img class="a11y-hidden" src="images/profile_sq.png" alt="프로필 이미지">
+						</figure>
+						<div class="card-header-content">
+							<p class="card-author">Tina Coloso</p>
+							<p class="card-date">2021-08-10</p>
+						</div>
+					</a>
+				</header>
+				<a href="#" class="card-body">
+					<figure class="card-image a11y-hidden-bg" style="background-image: url('images/house_tr.png')">
+						<img class="a11y-hidden" src="images/house_tr.png" alt="집">
+					</figure>
+					<p class="card-description">
+						Lorem, ipsum dolor sit amet consectetur adipisicing.
+					</p>
+				</a>
+			</article>
+
+			<!-- 카드 아이템 1개 -->
+			<article class="card-item">
+				<header class="card-header">
+					<a href="#" class="card-header-link">
+						<figure class="author-photo a11y-hidden-bg" style="background-image: url(images/profile_sq.png)">
+							<img class="a11y-hidden" src="images/profile_sq.png" alt="프로필 이미지">
+						</figure>
+						<div class="card-header-content">
+							<p class="card-author">Tina Coloso</p>
+							<p class="card-date">2021-08-10</p>
+						</div>
+					</a>
+				</header>
+				<a href="#" class="card-body">
+					<figure class="card-image a11y-hidden-bg" style="background-image: url('images/house_tr.png')">
+						<img class="a11y-hidden" src="images/house_tr.png" alt="집">
+					</figure>
+					<p class="card-description">
+						Lorem, ipsum dolor sit amet consectetur adipisicing.Lorem, ipsum dolor sit amet consectetur adipisicing.Lorem, ipsum dolor sit amet consectetur adipisicing.Lorem, ipsum dolor sit amet consectetur adipisicing.
+					</p>
+				</a>
+			</article>
+			
+			<!-- 카드 아이템 1개 -->
+			<article class="card-item">
+				<header class="card-header">
+					<a href="#" class="card-header-link">
+						<figure class="author-photo a11y-hidden-bg" style="background-image: url(images/profile_sq.png)">
+							<img class="a11y-hidden" src="images/profile_sq.png" alt="프로필 이미지">
+						</figure>
+						<div class="card-header-content">
+							<p class="card-author">Tina Coloso</p>
+							<p class="card-date">2021-08-10</p>
+						</div>
+					</a>
+				</header>
+				<a href="#" class="card-body">
+					<figure class="card-image a11y-hidden-bg" style="background-image: url('images/house_tr.png')">
+						<img class="a11y-hidden" src="images/house_tr.png" alt="집">
+					</figure>
+					<p class="card-description">
+						Lorem, ipsum dolor sit amet consectetur adipisicing.Lorem, ipsum dolor sit amet consectetur adipisicing.Lorem, ipsum dolor sit amet consectetur adipisicing.Lorem, ipsum dolor sit amet consectetur adipisicing.
+					</p>
+				</a>
+			</article>
+
+			<!-- 카드 아이템 1개 -->
+			<article class="card-item">
+				<header class="card-header">
+					<a href="#" class="card-header-link">
+						<figure class="author-photo a11y-hidden-bg" style="background-image: url(images/profile_sq.png)">
+							<img class="a11y-hidden" src="images/profile_sq.png" alt="프로필 이미지">
+						</figure>
+						<div class="card-header-content">
+							<p class="card-author">Tina Coloso</p>
+							<p class="card-date">2021-08-10</p>
+						</div>
+					</a>
+				</header>
+				<a href="#" class="card-body">
+					<figure class="card-image a11y-hidden-bg" style="background-image: url('images/house_tr.png')">
+						<img class="a11y-hidden" src="images/house_tr.png" alt="집">
+					</figure>
+					<p class="card-description">
+						Lorem, ipsum dolor sit amet consectetur adipisicing.Lorem, ipsum dolor sit amet consectetur adipisicing.Lorem, ipsum dolor sit amet consectetur adipisicing.Lorem, ipsum dolor sit amet consectetur adipisicing.
+					</p>
+				</a>
+			</article>
+			
+		</section>
+
+	</div>
+</body>
+</html>

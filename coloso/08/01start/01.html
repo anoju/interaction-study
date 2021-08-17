@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Grid</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="default.css">
+	<style>
+		.container {
+			/* height: 100vh; */
+			display: grid;
+			/* display: inline-grid; */
+			/* grid-template-columns: 200px 200px 300px; */
+			grid-template-columns: 1fr 1fr 1fr;
+			/* fr: fraction */
+			/* grid-template-columns: repeat(3, 1fr); */
+			/* grid-template-columns: 200px 1fr; */
+			/* grid-template-columns: 100px 200px auto; */
+
+			/* grid-template-rows: 150px 150px 300px; */
+			/* grid-template-rows: 1fr 1fr 1fr */
+			/* grid-template-rows: repeat(3, 1fr) */
+			/* grid-template-rows: 200px 1fr */
+			/* grid-template-rows: 100px 200px auto */
+			grid-template-rows: repeat(2, minmax(80px, auto));
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item">Item 1</div>
+		<div class="item">Item 2</div>
+		<div class="item"><img src="images/profile_s.png" alt="Tina"></div>
+		<div class="item">Item 4</div>
+		<div class="item">Item 5</div>
+		<div class="item">Item 6</div>
+		<div class="item">Item 7</div>
+		<div class="item">Item 8</div>
+		<div class="item">Item 9</div>
+	</div>
+	BBB
+</body>
+</html>

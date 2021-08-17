@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>유연한 박스</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="default.css">
+	<style>
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			/* height: 100vh; */
+		}
+		.item {
+			/* flex-basis: 0%로 들어간다 */
+			/* flex: 1; */
+
+			flex: 1 1 auto;
+
+			/* 기본값 */
+			/* flex: 0 1 auto; */
+			/* flex-grow: 0; flex-shrink: 1; flex-basis: auto; */
+			
+			/* flex: 1; */
+			/* flex-grow: 1; flex-shrink: 1; flex-basis: 0%; */
+			
+			/* flex: 1 1 auto; */
+			/* flex-grow: 1; flex-shrink: 1; flex-basis: auto; */
+			
+			/* flex: 1 500px; */
+			/* flex-grow: 1; flex-shrink: 1; flex-basis: 300px; */
+			
+			/* flex-basis: 0; */
+		}
+
+		/* 숫자는 여백의 비율 */
+		.item:nth-child(1) {
+			flex-grow: 1;
+			/* flex-basis: 40%; */
+			/* flex-basis를 auto로 두면 width값을 사용하므로, flex-basis는 auto로 두고 width를 조정하면 편하다 */
+			width: 40%;
+		}
+		.item:nth-child(2) {
+			flex-grow: 1;
+			/* flex-basis: 40%; */
+			width: 40%;
+		}
+		.item:nth-child(3) {
+			/* flex-grow: 1; */
+			/* flex-shrink: 0; */
+			/* flex-basis: 33%; */
+			width: 33%;
+		}
+		/* .item:nth-child(4) {
+			flex-grow: 1;
+		}
+		.item:nth-child(5) {
+			flex-grow: 1;
+		} */
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item">Item 1</div>
+		<div class="item">Item 2</div>
+		<div class="item"><img src="images/profile_s.png" alt="Tina"></div>
+		<div class="item">Item 4</div>
+		<div class="item">Item 5</div>
+	</div>
+</body>
+</html>

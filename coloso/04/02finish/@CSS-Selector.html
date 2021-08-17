@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS 셀렉터</title>
+	<style>
+		.info-table {
+			width: 90%;
+			min-width: 300px;
+			max-width: 1000px;
+			margin: 0 auto;
+			border-collapse: collapse;
+			border-spacing: 0;
+			border-left: 1px solid #ccc;
+			border-top: 1px solid #ccc;
+			font-size: 20px;
+			line-height: 1.4;
+		}
+		.info-table caption {
+			margin: 20px 0;
+		}
+		.info-table th {
+			font-weight: normal;
+			text-align: left;
+			white-space: nowrap;
+			background: #eee;
+		}
+		.info-table th,
+		.info-table td {
+			padding: 10px;
+			border-right: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+		}
+		.info-table em {
+			color: #777;
+		}
+	</style>
+</head>
+<body>
+	<table class="info-table">
+		<caption>CSS 셀렉터</caption>
+		<tr>
+			<th>*</th>
+			<td>모든 요소 선택(남발하면 성능에 악영향)</td>
+		</tr>
+		<tr>
+			<th>요소이름</th>
+			<td>
+				해당 요소 모두 선택<br>
+				p {} <em>p 선택</em>
+			</td>
+		</tr>
+		<tr>
+			<th>#foo {}</th>
+			<td>
+				id<br>
+				#foo <em>id="foo" 선택</em>
+			</td>
+		</tr>
+		<tr>
+			<th>.foo {}</th>
+			<td>
+				class<br>
+				.foo <em>class="foo" 선택</em>
+			</td>
+		</tr>
+		<tr>
+			<th>부모&nbsp;&nbsp;자식</th>
+			<td>
+				부모에 포함된 자식만 선택<br>
+				.main-section&nbsp;&nbsp;.foo <em>class="main-section"에 포함된 class="foo"만 선택</em>
+			</td>
+		</tr>
+		<tr>
+			<th>부모 > 자식</th>
+			<td>
+				한 단계 아래 자식만 선택<br>
+				<em>.parent > .a</em>
+<pre>
+&lt;div class="parent"&gt;
+    <strong>&lt;div class="a"&gt;</strong>A<strong>&lt;/div&gt;</strong>
+    <strong>&lt;div class="b"&gt;</strong>
+        &lt;div class="a"&gt;A&lt;/div&gt;
+    <strong>&lt;/div&gt;</strong>
+&lt;/div&gt;
+</pre>
+			</td>
+		</tr>
+		<tr>
+			<th>a + b</th>
+			<td>
+				a 바로 다음에 나오는 형제 b만 선택<br>
+				<em>.a + .b</em>
+<pre>
+&lt;div class="b"&gt;B&lt;/div&gt;
+&lt;div class="a"&gt;A&lt;/div&gt;
+<strong>&lt;div class="b"&gt;B&lt;/div&gt;</strong>
+&lt;div class="b"&gt;B&lt;/div&gt;
+&lt;div class="c"&gt;C&lt;/div&gt;
+&lt;div class="b"&gt;B&lt;/div&gt;
+</pre>
+			</td>
+		</tr>
+		<tr>
+			<th>a ~ b</th>
+			<td>
+				a 다음에 나오는 형제 b를 모두 선택<br>
+				<em>.a ~ .b</em>
+<pre>
+&lt;div class="b"&gt;B&lt;/div&gt;
+&lt;div class="a"&gt;A&lt;/div&gt;
+<strong>&lt;div class="b"&gt;B&lt;/div&gt;</strong>
+<strong>&lt;div class="b"&gt;B&lt;/div&gt;</strong>
+&lt;div class="c"&gt;C&lt;/div&gt;
+<strong>&lt;div class="b"&gt;B&lt;/div&gt;</strong>
+</pre>
+			</td>
+		</tr>
+		<tr>
+			<th>[속성이름]</th>
+			<td>
+				해당 속성을 가지고 있는 요소 선택<br>
+				[class] <em>class 속성이 있는 요소 선택</em>
+			</td>
+		</tr>
+		<tr>
+			<th>[속성이름=값]</th>
+			<td>
+				해당 속성과 값이 일치하는 있는 요소 선택<br>
+				[class='foo'] <em>class="foo" 선택</em>
+			</td>
+		</tr>
+		<tr>
+			<th>[속성이름~=값]</th>
+			<td>
+				여러개의 값을 가지고 있더라도 속성값에 "값"을 갖고 있다면 선택<br>
+				[class~='foo']
+				<em>class="title foo a"</em>
+			</td>
+		</tr>
+		<tr>
+			<th>[속성이름*=값]</th>
+			<td>
+				[class*='foo'] <em>class 값에 foo가 포함된 요소 선택<br>class="foo", class="aafoo", class="bfoo22" 등</em>
+			</td>
+		</tr>
+		<tr>
+			<th>[속성이름^=값]</th>
+			<td>
+				[href^='http'] <em>href 값이 http로 시작하는 요소 선택<br>
+				href="https://studiomeal.com"</em>
+			</td>
+		</tr>
+		<tr>
+			<th>[속성이름$=값]</th>
+			<td>
+				[src$='.png'] <em>src 값이 .png로 끝나는 요소 선택<br>
+				src="aaa.png"</em>
+			</td>
+		</tr>
+		<tr>
+			<th>:hover</th>
+			<td>가상 클래스.<br>마우스를 요소 위에 올렸을 때</td>
+		</tr>
+		<tr>
+			<th>:checked</th>
+			<td>가상 클래스.<br>radio, checkbox가 체크된 상태</td>
+		</tr>
+		<tr>
+			<th>
+				::before
+			</th>
+			<td>
+				가상 요소.<br>
+				<em>
+<pre>
+.foo::before {
+    content: 'before!';
+}
+</pre>
+				</em>
+<pre>
+&lt;div class="foo"&gt;
+    <strong>before!</strong>원래 있는 콘텐츠
+&lt;/div&gt;
+</pre>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				::after
+			</th>
+			<td>
+				가상 요소.<br>
+				<em>
+<pre>
+.foo::after {
+    content: 'after!';
+}
+</pre>
+				</em>
+<pre>
+&lt;div class="foo"&gt;
+    원래 있는 콘텐츠<strong>after!</strong>
+&lt;/div&gt;
+</pre>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

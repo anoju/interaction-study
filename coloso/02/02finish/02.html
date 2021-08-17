@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>테이블</title>
+	<style>
+		table{
+			border: 1px solid gray;
+		}
+		td {
+			background: lightgray;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<caption>NBA 선수 명단</caption>
+		<colgroup>
+			<col class="col-name">
+			<col class="col-height">
+			<col class="col-weight">
+			<col class="col-position">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>이름</th>
+				<th>키</th>
+				<th>몸무게</th>
+				<th>포지션</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>마이클 조던</td>
+				<td>198cm</td>
+				<td>98kg</td>
+				<td>슈팅가드</td>
+			</tr>
+			<tr>
+				<td>르브론 제임스</td>
+				<td>206cm</td>
+				<td>113kg</td>
+				<td>스몰포워드</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th>총 인원</th>
+				<td colspan="3">2명</td>
+				<!-- rowspan -->
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>

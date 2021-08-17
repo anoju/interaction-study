@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>검색창</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="default.css">
+	<style>
+		.search-form {
+			display: flex;
+			height: 40px;
+		}
+		.search-form input[type='search'] {
+			flex: 1 1 auto;
+			/* height: 40px; */
+			border: 2px solid #222;
+			font-size: 1rem;
+		}
+		.search-form input[type='submit'] {
+			/* height: 40px; */
+			padding: 0 1em;
+			/* border-width: 0; */
+			border: 0;
+			font-size: 1rem;
+			color: white;
+			background: #222;
+		}
+	</style>
+</head>
+<body>
+	<form class="search-form">
+		<input type="search">
+		<input type="submit" value="찾기">
+	</form>
+</body>
+</html>

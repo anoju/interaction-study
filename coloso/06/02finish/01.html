@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* calc() 함수를 써서 계산할 수도 있어요.
+		그치만, 익숙하지 않다면 먼저 직접 계산해 보시는 걸 추천 드립니다 :) */
+
+		/* em */
+		/* :root */
+		html {
+			/* font-size: 12px; */
+			/* font-size: 16px; 기본값 */
+			/* font-size: 20px; */
+		}
+		h1 {
+			font-family: Roboto, sans-serif;
+			/* font-size: 80px; */
+			font-size: 5em; /* 80 / 16 */
+			color: #f11f5f;
+		}
+
+		h1 small {
+			display: block;
+			/* font-size: 24px; */
+			font-size: 0.3em; /* 24 / 80 */
+		}
+
+		/* rem */
+		/* root em */
+		h2 {
+			font-family: Roboto, sans-serif;
+			/* font-size: 80px; */
+			font-size: 5rem; /* 80 / 16 */
+			color: dodgerblue;
+		}
+
+		h2 small {
+			display: block;
+			/* font-size: 24px; */
+			font-size: 1.5rem; /* 24 / 16 */
+			font-size: calc(24 / 16 * 1rem);
+		}
+
+		.btn {
+			/* padding: 10px; */
+			/* padding: 0.625rem; */
+			padding: 0.3125em; /* 10 / 32 */
+			font-size: 2rem; /* 32px */
+		}
+		.btn-style-2 {
+			font-size: 1rem;
+		}
+		.btn-style-3 {
+			font-size: 5rem;
+		}
+	</style>
+</head>
+<body>
+	<h1>
+		<small>Hello, Coloso!</small>
+		I'm Coloso!
+	</h1>
+
+	<h2>
+		<small>Hello, Coloso!</small>
+		I'm Coloso!
+	</h2>
+
+	<button class="btn">Join</button>
+	<button class="btn btn-style-2">Join2</button>
+	<button class="btn btn-style-3">Join3</button>
+</body>
+</html>

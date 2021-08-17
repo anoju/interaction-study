@@ -1,0 +1,146 @@
+/* 메뉴 */
+.menu {
+	display: flex;
+}
+.menu-link {
+	flex: 1 1 auto;
+	padding: 0.5em 0;
+	border-top: 2px solid #222;
+	border-bottom: 2px solid #222;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	background: white;
+}
+.menu-link:hover {
+	color: white;
+	background: #222;
+}
+
+/* 검색창 */
+.search-form {
+	display: flex;
+	height: 40px;
+}
+.search-form input[type='search'] {
+	flex: 1 1 auto;
+	/* height: 40px; */
+	border: 2px solid #222;
+	font-size: 1rem;
+}
+.search-form input[type='submit'] {
+	/* height: 40px; */
+	padding: 0 1em;
+	/* border-width: 0; */
+	border: 0;
+	font-size: 1rem;
+	color: white;
+	background: #222;
+}
+
+/* 불릿 리스트 */
+.info-list-item {
+	display: flex;
+	margin: 0.5em 0;
+}
+.info-list-item::before {
+	content: '✅';
+	margin-right: 0.25em;
+}
+
+/* 썸네일과 텍스트 리스트 */
+.thumb-info-item {
+	display: flex;
+	/* align-items: center; */
+	margin-bottom: 1.5em;
+}
+.author-photo {
+	flex-shrink: 0;
+	width: 40px;
+	height: 40px;
+	margin-right: 0.5em;
+	/* border-radius: 20px; */
+	border-radius: 50%;
+	background-color: white;
+}
+
+/* 카드 리스트 */
+.card-list-container {
+	overflow-x: hidden;
+}
+.card-item {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2em;
+}
+.card-header {
+	border: 2px solid #222;
+	border-bottom: 0;
+}
+.card-header-link {
+	display: flex;
+	padding: 1em;
+	align-items: center;
+	text-decoration: none;
+	background: white;
+	line-height: 1.4;
+}
+.card-header-content {
+	flex: 1 1 auto;
+}
+.card-author {
+	font-weight: bold;
+}
+.card-date {
+	font-size: 0.7rem;
+}
+.author-photo {
+	flex-shrink: 0;
+	width: 40px;
+	height: 40px;
+	margin-right: 0.5em;
+	border-radius: 50%;
+	background-color: white;
+}
+.card-body {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	text-decoration: none;
+}
+.card-image {
+	padding-bottom: 60%;
+	border-left: 2px solid #222;
+	border-right: 2px solid #222;
+}
+.card-item:nth-child(5n+1) .card-image { background-color: #f98866; }
+.card-item:nth-child(5n+2) .card-image { background-color: #5ab4e6; }
+.card-item:nth-child(5n+3) .card-image { background-color: #ffbb00; }
+.card-item:nth-child(5n+4) .card-image { background-color: #80bd9e; }
+.card-item:nth-child(5n+5) .card-image { background-color: #a67fc5; }
+.card-description {
+	flex: 1 1 auto;
+	padding: 1em;
+	border: 2px solid #222;
+	border-top: 0;
+	background: white;
+}
+
+@media (min-width: 600px) {
+	.card-list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -1rem;
+	}
+	.card-item {
+		width: 50%;
+		padding: 0 1rem;
+	}
+}
+
+@media (min-width: 1200px) {
+	.card-item {
+		width: 33.33333%;
+	}
+}

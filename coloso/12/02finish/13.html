@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		class Person {
+			constructor(name, message) {
+				// 생성자
+				// 인스턴스가 생성될 때 실행(초기화)
+				console.log('Person 클래스 생성자 실행');
+				this.name = name;
+				this.message = message;
+			}
+
+			walk() {
+				console.log('걷기!');
+			}
+
+			// hi(message) {
+			// 	console.log(`안녕! 내 이름은 ${this.name}임. ${message}`);
+			// }
+			hi() {
+				console.log(`안녕! 내 이름은 ${this.name}임. ${this.message}`);
+			}
+		}
+
+		const 사람1 = new Person('사미자', '잘 부탁해!'); // 인스턴스(instance)
+		const 사람2 = new Person('최불암', '파~'); // 인스턴스(instance)
+
+		사람1.hi();
+		사람2.hi();
+	</script>
+</head>
+<body>
+	<h1>클래스(Class)</h1>
+</body>
+</html>

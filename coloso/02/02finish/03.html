@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>입력폼</title>
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>사용자 정보</legend>
+			<div>
+				<label for="user-id">아이디</label>
+				<input type="text" id="user-id"
+					minlength="2" maxlength="16" placeholder="영문과 숫자만 허용"
+					required>
+			</div>
+			<div>
+				<label for="user-password">패스워드</label>
+				<input type="password" id="user-password"
+					minlength="8" maxlength="16" placeholder="최소 8자리"
+					required>
+			</div>
+			<div>
+				<label for="user-introduction">자기소개</label>
+				<textarea id="user-introduction"></textarea>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>중국음식 취향</legend>
+			<div>
+				<input type="radio" name="eating-style" id="bumeok">
+				<label for="bumeok">부먹</label>
+				<input type="radio" name="eating-style" id="chikmeok">
+				<label for="chikmeok">찍먹</label>
+			</div>
+			<div>
+				<input type="checkbox" name="favorite" id="chajang">
+				<label for="chajang">짜장면</label>
+				<input type="checkbox" name="favorite" id="champong">
+				<label for="champong">짬뽕</label>
+				<input type="checkbox" name="favorite" id="tangsuyuk">
+				<label for="tangsuyuk">탕수육</label>
+				<input type="checkbox" name="favorite" id="kanpungi">
+				<label for="kanpungi">깐풍기</label>
+			</div>
+		</fieldset>
+		<div>
+			<input type="submit" value="전송">
+			<!-- <button type="submit">전송</button> -->
+			<input type="reset" value="다시 작성">
+		</div>
+
+		<!-- 일반적인 버튼(자바스크립트 제어) -->
+		<!-- <button type="button">전송</button> -->
+	</form>
+</body>
+</html>

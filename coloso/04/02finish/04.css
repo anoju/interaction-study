@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'twaysky';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+	
+}
+body {
+	font-size: 14px;
+	font-family: 'Gothic A1', sans-serif;
+	line-height: 1.5;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.page-header {
+	padding: 30px;
+}
+.page-footer {
+	padding: 30px;
+}
+.site-name {
+	font-size: 30px;
+	font-family: 'twaysky';
+}
+.section-title {
+	font-size: 24px;
+	font-family: 'Black Han Sans', sans-serif;
+}
+.info-list {
+	/* 위(top)에서부터 시계방향 */
+	/* margin: 10px 20px 30px 40px;
+	margin-top: 10px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+	margin-left: 40px; */
+
+	margin: 20px 0;
+	/* margin: 20px 0 20px; */
+	/* margin: 20px 0 20px 0; */
+	/* margin-top: 20px; */
+	/* margin-bottom: 20px; */
+}
+.content-section {
+	margin: 20px;
+	padding: 30px;
+	border: 3px solid #333;
+}
+.ingredient-content-section {
+	background: salmon;
+}
+
+/* 특정 부모의 자식으로 제한해서 적용하기 */
+.ingredient-content-section li {
+	color: yellow;
+}
+.info-list li {
+	font-style: italic;
+}
+.info-list li ul {
+	margin-left: 30px;
+	font-size: 12px;
+}
+/* 바로 한단계 아래 자식만 선택 */
+.page-header > p {
+	color: salmon;
+}
+
+.info-list-2 {
+	margin-left: 30px;
+	font-size: 12px;
+}
+
+/* n번째 요소 선택하기(가상 클래스 사용) */
+/* 첫번째 */
+/* li:first-child {
+	border-bottom: 1px dashed #333;
+} */
+
+/* 마지막 */
+/* li:last-child {
+	border-bottom: 1px dashed #333;
+} */
+
+/* n번째 */
+li:nth-child(3) {
+	background: lime;
+}
+

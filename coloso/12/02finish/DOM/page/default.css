@@ -1,0 +1,28 @@
+body {
+	font-family: Roboto, sans-serif;
+	line-height: 1.4;
+	background: #fff;
+}
+a {
+	color: #222;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.a11y-hidden-bg {
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.a11y-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	clip-path: polygon(0 0, 0 0, 0 0);
+}

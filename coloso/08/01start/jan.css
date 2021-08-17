@@ -1,0 +1,77 @@
+html {
+	font-size: 1.5vw;
+	color: #000;
+}
+body {
+	overflow-x: hidden;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	background: #eae1ce;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+h1, h2, h3 {
+	letter-spacing: -0.01em;
+}
+button {
+	font-size: 1rem;
+}
+
+/* layout */
+.poster {
+	height: 100vh;
+	padding: 1rem;
+}
+.header {
+	
+}
+.message {
+	font-size: 4vw;
+}
+.provider {
+	font-size: 1.2vw;
+}
+.menu {
+	font-size: 2vw;
+	line-height: 1;
+}
+.menu a {
+	margin-right: 1em;
+}
+.sub-copy {
+	padding-top: 1em;
+	font-size: 3vw;
+	text-align: right;
+	line-height: 1;
+	white-space: nowrap;
+}
+.main-copy {
+	font-size: 9.1vw;
+	color: #cc0032;
+	text-align: center;
+	line-height: 1;
+	white-space: nowrap;
+}
+.links a {
+	display: block;
+}
+.line {
+	background: #cc0032;
+}
+.footer {
+	font-size: 1.2vw;
+}
+.logo {
+	color: #cc0032;
+}
+.address {
+	text-align: right;
+	font-style: normal;
+}
+

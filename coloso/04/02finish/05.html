@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>특정 순번째 요소 선택하기</title>
+	<style>
+		.list li {
+			margin: 30px 0;
+		}
+		.list li:first-child {
+			background: red;
+		}
+		.list li:last-child {
+			background: blue;
+		}
+		.list li:nth-child(3) {
+			font-size: 20px;
+		}
+		/* odd: 홀수만 선택 */
+		.list li:nth-child(odd) {
+			border: 5px dotted black;
+		}
+		/* even: 짝수만 선택 */
+		.list li:nth-child(even) {
+			list-style: circle;
+		}
+		/* n에는 0부터 대입 */
+		.list li:nth-child(3n+1) {
+			outline: 5px solid orange;
+		}
+
+		section {
+			background: gold;
+		}
+		article {
+			background: lime;
+		}
+		/* 태그 종류를 체크해서 선택: 아래는 section 태그 중 4번째 요소를 선택하는 예시 */
+		section:nth-of-type(4) {
+			border: 3px solid black;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<section>s</section>
+		<article>a</article>
+		<section>s</section>
+		<article>a</article>
+		<section>s</section>
+		<article>a</article>
+		<section>s</section>
+		<article>a</article>
+		<section>s</section>
+		<article>a</article>
+	</div>
+	
+	<ul class="list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+	</ul>
+
+</body>
+</html>

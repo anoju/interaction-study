@@ -1,0 +1,111 @@
+html {
+	font-size: 36px;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #222;
+	background: #222;
+}
+
+a {
+	color: #222;
+}
+
+.btn {
+	display: inline-block;
+	height: 50px;
+	padding: 0 0.5rem;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 50px;
+	text-decoration: none;
+	background: #222;
+}
+
+.btn.main-btn {
+	width: 50%;
+}
+
+.btn.tag-btn {
+	width: 25%;
+	margin-left: calc(-150 / 800 * 100%);
+	margin-top: 50px;
+	background: #f11f5f;
+}
+
+.para {
+	margin-bottom: 1em;
+	line-height: 1.4;
+}
+
+.page {
+	width: 83.33333%; /* 1000 / 1200 */
+	padding-left: 8.33333%; /* 100 / 1200 */
+	padding-right: calc(100 / 1200 * 100%);
+	margin: 0 auto;
+	padding-bottom: 50%;
+	background-color: #fff;
+	background-image: url('images/house_tr.png');
+	/* background-image: url('images/profile_s.png'); */
+	background-repeat: no-repeat;
+	/* background-position: 100px 50px; */
+	/* background-position: center; */
+	/* background-position: 50% 70%; */
+	/* background-size: 100px auto; */
+	/* background-size: cover; */
+	background-size: contain;
+	background-position: center bottom;
+}
+
+.page:after {
+	content: '';
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+.page-header {
+	margin-bottom: 1.6rem;
+	/* margin-bottom: 10%; */
+}
+
+.page-title {
+	/* font-size: 133px; */
+	/* font-size: 3.69444rem; */
+	/* font-size: calc(133 / 36 * 1rem); */
+	/* vw: viewport width, 100vw가 브라우저 폭 100% */
+	/* vh: viewport height, 100vh가 브라우저 높이 100% */
+	font-size: 11.1vw;
+	white-space: nowrap; /* 줄넘김 방지 */
+	/* 뷰포트 단위 정리 영상 */
+	/* https://youtu.be/_tbp1EFdMcc */
+	text-transform: uppercase;
+}
+
+.primary-content {
+	margin-bottom: 50px;
+}
+
+.secondary-content {
+	font-size: calc(20 / 36 * 1rem);
+	font-style: italic;
+}
+
+/* 800px 이상이면 적용 */
+@media (min-width: 800px) {
+	.primary-content {
+		float: left;
+		width: calc(540 / 800 * 100%);
+	}
+
+	.secondary-content {
+		float: right;
+		width: calc(200 / 800 * 100%);
+	}
+
+	.btn.tag-btn {
+		width: calc(150 / 800 * 100%);
+	}
+}

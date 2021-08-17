@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Canvas</title>
+	<style>
+		body {
+			margin: 0;
+		}
+		.the-canvas {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: lightgray;
+		}
+	</style>
+</head>
+<body>
+	<canvas class="the-canvas"></canvas>
+
+	<script>
+		console.log(window.devicePixelRatio);
+		const canvas = document.querySelector('.the-canvas');
+		const context = canvas.getContext('2d');
+		// const pixelRatio = window.devicePixelRatio;
+		// let pixelRatio = 1;
+		// if (window.devicePixelRatio > 1) {
+		// 	pixelRatio = 2;
+		// }
+		const pixelRatio = window.devicePixelRatio > 1 ? 2 : 1;
+		
+		function draw() {
+			context.scale(pixelRatio, pixelRatio);
+			context.fillRect(100, 50, 200, 100);
+			// context.fillRect(200, 100, 400, 200);
+		}
+
+		function setCanvasSize() {
+			canvas.width = window.innerWidth * pixelRatio;
+			canvas.height = window.innerHeight * pixelRatio;
+		}
+
+		setCanvasSize();
+		draw();
+
+		window.addEventListener('resize', () => {
+			setCanvasSize();
+			draw();
+		});
+	</script>
+</body>
+</html>

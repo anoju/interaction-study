@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>줄넘김 처리 설정</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="default.css">
+	<style>
+		.container {
+			display: flex;
+			/* flex-wrap: nowrap; */
+			/* flex-wrap: wrap; */
+			/* flex-wrap: wrap-reverse; */
+
+			/* flex-direction, flex-wrap을 동시에 설정하는 축약형 */
+			flex-flow: row wrap;
+			/* flex-direction: row; */
+			/* flex-wrap: wrap; */
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item">Item 1</div>
+		<div class="item">Item 2</div>
+		<div class="item"><img src="images/profile_s.png" alt="Tina"></div>
+		<div class="item">Item 4</div>
+		<div class="item">Item 5</div>
+	</div>
+</body>
+</html>

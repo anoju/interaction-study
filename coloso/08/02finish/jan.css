@@ -1,0 +1,105 @@
+html {
+	font-size: 1.5vw;
+	color: #000;
+}
+body {
+	overflow-x: hidden;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	background: #eae1ce;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+h1, h2, h3 {
+	letter-spacing: -0.01em;
+}
+button {
+	font-size: 1rem;
+}
+
+/* layout */
+.poster {
+	display: grid;
+	grid-template-columns: 0.73fr 0.135fr 0.135fr;
+	grid-template-areas:
+		'header       header        header'
+		'menu         menu          menu'
+		'sub-copy     sub-copy      sub-copy'
+		'main-copy    main-copy     main-copy'
+		'   .         links-a       links-b'
+		'line         line          line'
+		'footer       footer        footer'
+	;
+	grid-template-rows: auto auto auto auto 1fr 2px auto;
+	gap: 0.5rem;
+	height: 100vh;
+	padding: 1rem;
+}
+.header {
+	grid-area: header;
+	display: flex;
+	justify-content: space-between;
+}
+.message {
+	font-size: 4vw;
+}
+.provider {
+	font-size: 1.2vw;
+}
+.menu {
+	grid-area: menu;
+	font-size: 2vw;
+	line-height: 1;
+}
+.menu a {
+	margin-right: 1em;
+}
+.sub-copy {
+	grid-area: sub-copy;
+	padding-top: 1em;
+	font-size: 3vw;
+	text-align: right;
+	line-height: 1;
+	white-space: nowrap;
+}
+.main-copy {
+	grid-area: main-copy;
+	font-size: 9.1vw;
+	color: #cc0032;
+	text-align: center;
+	line-height: 1;
+	white-space: nowrap;
+}
+.links-a {
+	grid-area: links-a;
+}
+.links-b {
+	grid-area: links-b;
+}
+.links a {
+	display: block;
+}
+.line {
+	grid-area: line;
+	background: #cc0032;
+}
+.footer {
+	grid-area: footer;
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.2vw;
+}
+.logo {
+	color: #cc0032;
+}
+.address {
+	text-align: right;
+	font-style: normal;
+}
+
